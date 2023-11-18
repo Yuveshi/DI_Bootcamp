@@ -1,0 +1,41 @@
+table, td{
+    border: 1px solid black;
+    }
+    
+    th{
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    width: 79px;
+    }
+    
+    #header {
+    width: 100%;
+    border: 1px solid red;
+    margin-bottom: 15px;
+   
+
+    }
+    
+    .sub {
+    font-weight: bold;
+    text-align: center;
+    }
+    
+    #table2 {
+    width: 100%;
+    border-collapse: seperate;
+    margin-bottom: 10px;
+    }
+    
+    .highlight {
+        background-color: yellow;
+    }
+   
+.center {
+    text-align: center;
+}
+
+.images{
+    text-align: center;
+}
