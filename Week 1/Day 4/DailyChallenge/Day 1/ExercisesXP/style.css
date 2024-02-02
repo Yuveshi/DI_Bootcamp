@@ -1,0 +1,34 @@
+
+* {
+  box-sizing: border-box;
+        }
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        [class*="col-"] {
+            float: left;
+            padding: 15px;
+        }
+        .col-1 {width: 25%;}
+        .col-2 {width: 75%;}
+        .header {
+            color: #f2f2f2;
+            padding: 15px;
+        }
+        .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .menu li {
+            padding: 8px;
+            margin-bottom: 7px;
+            background-color: #33b5e5;
+            color: #ffffff;
+        }
+        .menu li:hover {
+            background-color: #0099cc;
+        }
+    
