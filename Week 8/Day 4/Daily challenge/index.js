@@ -9,7 +9,7 @@ const inventory = [
 
   function getCarHonda(cars) {
     const firstHonda = cars.find((car) => car.car_make === "Honda");
-    const sentence = `This is a ${firstHonda.car_make} ${firstHonda.car_model} of ${firstHonda.car_year}.`;
+    const sentence = `This is a ${firstHonda.car_make} ${firstHonda.car_model} of ${firstHonda.car_year}`;
     console.log("sentence:", sentence);
 }
 
