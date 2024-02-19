@@ -1,41 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    
-    <title>Landing Page</title>
-
-    <link rel="stylesheet" href="style.css"
-
-    <link rel="stylesheet" href="https://use.fontaesome.com/releases/v5.15.4/css/all.css">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/63bd801ead.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+        <title>Login Page</title>
     </head>
-  <body>
-    <div class="glass">
-      <nav>
-        <h2 class "logo">T||A</h2>
-        <ul>
-          <li><a href= "#">HOME</a></li>
-          <li><a href= "#">ABOUT</a></li>
-          <li><a href= "#">SERVICE</a></li>
-          <li><a href= "#">CONTACT</a></li>
-        </ul>
-        <img src="img/profile.jpg" alt="profile"
-      </nav>
-      <div>
-        <h3>it's  time to</h3>
-        <h1>TRAVEL</h1>
-      </div>
-      <class="icons">
-
-      <div class="icons"></div>
-        <ul>
-          <li><i>"fab fa-twitter"></i></li>
-          <li><i>"fab fa-whatsapp"></i></li>
-          <li><i>"fab fa-facebook"></i></li> 
-          <li><i>"fab fa-instagram"></i></li> 
-              </ul>
-    </div>
-
-    <!-- content here -->
-  </body>
+    <body>
+        <section class="form-section">
+            <div class="login">
+                <form action="https://httpbin.org/anything" method="get">
+                    <h1 class="login-header">Log in</h1>
+                    <input class="field" type="email" name="email" id="email_field_unique" placeholder="email">
+                    <input class="field" type="password" name="pass" id="pass2" placeholder="password">
+                    <div class="login-button-wrapper">
+                        <label class="remember" for="remember">
+                            <input class="checkbox" type="checkbox" name="remember" id="remember">
+                            Remember me
+                        </label>
+                        <a class="forgot-pass-link" href="#">Forgot password?</a>
+                    </div>
+                    <button class="button submit-button" type="submit">Log in</button>
+                </form>
+                <span class="divider">Or Connect with</span>
+                <ul class="social-list">
+                    <li class="social-item">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </li>
+                    <li class="social-item">
+                        <i class="fa-brands fa-twitter"></i>
+                    </li>
+                    <li class="social-item">
+                        <i class="fa-brands fa-github"></i>
+                    </li>
+                    <li class="social-item">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </li>
+                </ul>
+                <span class="year">&#169; 2023</span>
+            </div>
+            <div class="welcome">
+                <div class="wrapper">
+                    <i class="fa-solid fa-user-plus"></i>
+                    <h2 class="welcome-title">Hello, friend!</h2>
+                    <p class="subtitle">Enter your personal details and start journey with us</p>
+                    <a class="button button-secondary" href="#">
+                        <span class="button-text">Register</span>
+                        <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </body>
 </html>
