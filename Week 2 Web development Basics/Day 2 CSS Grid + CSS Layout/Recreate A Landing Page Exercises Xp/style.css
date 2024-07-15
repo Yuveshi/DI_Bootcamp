@@ -100,6 +100,13 @@ div.panel img {
     border: 1px solid var(--light-color--);
     z-index: 2;
 }
+
+div.panel img {
+    width: 72px;
+    height: 72px;
+}
+
+
 div.panel h2 {
     font-size: 1.2rem;
     font-weight: 600;
