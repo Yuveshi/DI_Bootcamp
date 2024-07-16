@@ -1,0 +1,105 @@
+.body{
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+}
+    
+.nav{
+    background-color: green;
+        width: 100%;
+        height: 5%;
+        display: flex;
+        justify-content: center;
+        font-family: 'Ubuntu', sans-serif;
+        color: white;
+    }
+
+.h5{
+    margin-right: 2%
+}
+    
+.button{
+        width: 100px;
+        height: 30px;
+        font-size: 12px;
+        font-family: 'Ubuntu', sans-serif;;
+        text-align: center;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 2px;
+        margin-top: 12px;
+}
+    
+Button.hover{
+    filter: brightness(40%);
+}
+    
+.cover{
+    background-image:  linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)), url(https://thumbs.dreamstime.com/b/seamless-cartoon-city-background-vector-illustration-separate-layers-92796292.jpg)  ;
+        font-family: 'Ubuntu', sans-serif;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5px;
+    }
+    
+    .content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50vw;
+    }
+    
+    label{
+        margin-bottom: 2px;
+        font-size: 10px;
+    }
+    
+    .input-container{
+        display: flex;
+        flex-direction: column;
+        padding: 8px;
+    }
+    
+    #Input{
+        background-color: white;
+        border: none;
+        border-radius: 2px;
+       }
+    
+    .fill1{
+        display: flex;
+        }
+     
+    .fill2{
+        display: flex
+    }
+    
+    .fill3{
+    
+        display: flex;
+        justify-content: stretch;
+    }
+    
+    #AService{
+        width: 50vw;
+        background-color: white;
+        border: none;
+        border-radius: 2px;
+        font-family: 'Ubuntu', sans-serif;
+    }
+    
+  .button2{
+        width: 100px;
+        height: 30px;
+        font-size: 12px;
+        font-family: 'Ubuntu', sans-serif;
+        text-align: center;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 2px;
+        margin-top: 12px;
+        margin-bottom: 12px;
+       }
