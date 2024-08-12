@@ -5,7 +5,7 @@
 // Create a function called infoAboutMe() that takes no parameter.
 function infoAboutMe() {
     // The function should console.log a sentence about you (ie. your name, age, hobbies ect…).
-    console.log('My name Anton. I\'m 28 and I like coding and video games')
+    console.log('My name Yuveshi. I\'m 30 and I like coding and adventure')
 }
 
 // Call the function.
