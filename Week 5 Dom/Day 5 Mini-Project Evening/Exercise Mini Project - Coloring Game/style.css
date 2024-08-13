@@ -1,65 +1,45 @@
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
-body{
-	background-color: darkgrey;
-}
-
-#sidebar {
-	display: grid;
-	grid-gap: 5px;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(8, 1fr);
-    height: 100vh;
-	width: 20%;
-	float: left;
-
-	background-color: darkgrey;
-	padding: 5px;
-}
-
-#main {
-	display: grid;
-	grid-template-columns: repeat(60, 1fr);
-    height: 100vh;
-	padding: 5px 5px 5px 0;
-}
-
-#sidebar > * {
-	border: 1px black solid;
-}
-
-    #sidebar .clear button {
-        border-radius: .25rem;
-        height: 100%;
-        width: 100%;
-        cursor: pointer;
-    }
-    
-    #sidebar .clear {
-        grid-column: 1/ -1;
-        }
-        
-       
-#main > * {
-	border: 1px lightgray solid;
-	background-color: white;
-}
-
-button {
-    
-    background-color: whitesmoke; 
-	border: none;
-	border-radius: 8px;
-	color:black;
-	padding: 5px;
-	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 22px;
-	margin: 4px 2px;
-	cursor: pointer;
+body {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+  
+  #container {
+    /* display: grid;
+    grid-template-columns: auto; */
+    gap: 10px;
+  }
+  
+  #sidebar {
+    margin-left: 26px;
+    display: grid;
+    grid-template-columns: repeat(3, 15px);
+    grid-template-rows: repeat(8, 8fr);
+    gap: 5px;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #000;
+  }
+  
+  #main {
+    margin-left: 150px;
+    display: grid;
+    grid-template-columns: repeat(60, 1fr);
+    grid-template-rows: repeat(40, 1fr); 
+    gap: 2px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #000;
+  }
+  
+  div {
+    width: 15px;
+    height: 15px;
+    border: 1px solid #000;
+  }
+  
+  button {
+    margin-top: 200px;
+    padding: 10px;
+    cursor: pointer;
   }
