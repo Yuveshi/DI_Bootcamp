@@ -1,51 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mini Project - Random Quote Generator</title>
+    <script src="https://kit.fontawesome.com/a4b14398fd.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/668c86db2f.js" crossorigin="anonymous"></script>
 </head>
 <body>
+<section>
     <div class="container">
-        <div class="inner-box">
-            <button class="quote" >Generate  Quote</button>
-            <div class="text">
-                <p class="font"><i class="fa-solid fa-quote-left fa-2xl"></i></p>
-            <p id="quote">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem quod repellendus incidunt enim, veritatis quos.</p>
-            <span class="author">Lorem, ipsum.</span>
-            </div>
-            <form id="quoteForm">
-                <input type="text" id="newQuote" placeholder="Quote">
-                <input type="text" id="newAuthor" placeholder="Author">
-                <button type="submit">Add Quote</button>
-            </form>
-            
-            <button id="charCountWithSpace">Character Count (With Spaces)</button>
-            <button id="charCountWithoutSpace">Character Count (Without Spaces)</button>
-            <button id="wordCount">Word Count</button>
-            <button id="likeButton">Like</button>
+        <button type="button" id="generateQuoteButton">Generate Quote</button>
+        <div class="quote-container" data-quote-id>
+            <div class="quote-text"></div>
+            <div class="quote-author"></div>
         </div>
-        
     </div>
-
-    <section id="quoteSection">
-        <h1>My Quotes</h1>
-        <h5>Motivational, Inspirational and more!</h5>
-        <h6 id="quoteText"></h6>
-        <h6 id="quoteAuthor" class="green-text"></h6>
-        <form id="quoteSearchForm">
-            <input type="text" id="quoteId" placeholder="Quote ID">
+    <div class="container">
+        <button class="action-buttons" type="button" id="getLengthButton">Numbers of Characters</button>
+        <button class="action-buttons" type="button" id="getLengthWOSpaceButton">Numbers of Characters w/o Spaces</button>
+        <button class="action-buttons" type="button" id="getWordsNumberButton">Number of Words</button>
+        <button class="action-buttons" type="button" id="likeQuoteButton">Like!</button>
+        <div class="result" id="result"></div>
+    </div>
+    <div class="container">
+        <form id="newQuoteForm">
+            <label for="inputQuote">Quote: </label><input type="text" name="quote" id="inputQuote">
+            <label for="inputAuthor">Author: </label><input type="text" name="author" id="inputAuthor">
+            <button type="submit">Add Quote</button>
+        </form>
+    </div>
+    <div class="container">
+        <form id="filterQuoteForm">
+            <label for="filterInputAuthor">Author:</label>
+            <input type="text" name="author" id="filterInputAuthor">
             <button type="submit">Search</button>
         </form>
-        <div>
-            <button id="prevButton">Previous</button>
-            <span class="span"> - - - - </span>
-            <button id="nextButton">Next</button>
-        </div>
-    </section>
-
-    <script src="script.js"></script>
+        <button type="button" id="previousQuote">Previous</button>
+        <button type="button" id="nextQuote">Next</button>
+    </div>
+</section>
+<script src="quotes.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

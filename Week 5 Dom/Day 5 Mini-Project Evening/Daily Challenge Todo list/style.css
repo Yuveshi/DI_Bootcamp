@@ -1,32 +1,32 @@
-.container {
-    padding: 20px;
-    background-color: #f3f3f3;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+* {
+    padding: 0;
+    margin: 0;
 }
 
-.task {
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ddd;
-    background-color: #fff;
+.main_container {
+    text-align: center;
 }
 
-input, button {
-    padding: 8px;
-    font-size: 16px;
-    border: 1px solid #ddd;
+.header_todo{
+    margin-top: 20px;
+    border: solid 2px red;
+    height: 70px;
 }
 
-button {
-    background-color: #ff5555;
-    color: white;
+.task_form {
+    margin-top: 20px;
+    border: solid 2px red;
+    height: 70px;
 }
 
-button:hover {
-    background-color: #ff2525;
+.listTasks {
+    margin-top: 20px;
+    border: solid 2px green;
+    height: 100px;
 }
 
-.task-done .task-text {
-    color: red;
-    text-decoration: line-through;
+.clear {
+    margin-top: 20px;
+    border: solid 2px purple;
+    height: 70px;
 }

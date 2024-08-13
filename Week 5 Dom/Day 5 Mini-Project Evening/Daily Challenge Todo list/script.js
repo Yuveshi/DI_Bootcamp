@@ -1,46 +1,48 @@
-const tasks = []
-let currentId = 0
-const addTaskButton = document.getElementById('addTaskButton')
-const addTaskInput = document.getElementById('addTaskInput')
-const tasksContainer = document.querySelector('.list-tasks')
+const tasks = [];
+const form = document.forms[0];
+let input = form.new_task_input;
+const submit_btn = form.submit_input;
+const listTasks = document.querySelector('.listTasks')
+const clearButton = document.querySelector('.clear_btn')
+let inputValue;
+let taskIdCount = 0;
+let xmark = '<i class="fa-solid fa-xmark"></i>'
 
-addTask = function () {
-    if (addTaskInput.value !== '') {
-        const newTask = {
-            taskId: currentId,
-            text: addTaskInput.value,
-            done:false
-        }
 
-        const taskDiv = document.createElement('div')
-        taskDiv.dataset['taskId'] = newTask.taskId
-        taskDiv.classList.add('task')
-        taskDiv.innerHTML = `<button><i class="fa fa-times" aria-hidden="true"></i></button><input type="checkbox"><span class="task-text">${newTask.text}</span>`
 
-        tasksContainer.appendChild(taskDiv)
+function clearInput(){
+    input.value = '';
+}
 
-        taskDiv.children.item(0).addEventListener('click', deleteTask)
-        taskDiv.children.item(1).addEventListener('change', doneTask)
+function checkHeightListTasks(){
+   if (tasks.length > 3){
+    let height = '10px'
+    height = height + '10px'
+    listTasks.lastElementChild.height = heightAttrListTasks + height
+   }
+}
 
-        tasks.push(newTask)
-        currentId += 1
+
+
+
+function addTask(event) {
+    event.preventDefault();
+    inputValue = input.value;
+    let newTask = document.createElement("div");
+    newTask.textContent = inputValue;
+    newTask.innerHTML = `<i style="pointer-events: none" class="fa-solid fa-x fa-2xs"></i>
+    <input class="me-1"" type="checkbox" name="checlbox" id="checkbox">
+    <label name="checkbox">${inputValue}</label>
+    `;
+    tasks.push(newTask)
+    listTasks.append(tasks[taskIdCount])
+    taskIdCount++;
+    clearInput();
+}
+
+
+function clearAllTasks(){
+    for(let task of tasks){
+        task.remove();
     }
 }
-
-doneTask = function (ev) {
-    const taskElement = ev.target.closest('.task');
-    const taskId = parseInt(taskElement.dataset['taskId'])
-    tasks.find(task => task.taskId === taskId).done = true;
-    taskElement.classList.add('task-done')
-    ev.target.disabled = true
-}
-
-deleteTask = function (ev) {
-    const taskElement = ev.target.closest('.task');
-    const taskId = parseInt(taskElement.dataset['taskId'])
-    tasks.splice(tasks.findIndex(task => task.taskId === taskId), 1)
-
-    taskElement.remove()
-}
-
-addTaskButton.addEventListener('click', addTask)
