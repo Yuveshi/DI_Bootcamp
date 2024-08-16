@@ -1,0 +1,39 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('stars-background-blue-photoshop.jpg');
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.hidden {
+    display: none;
+
+}
+
+#loading {
+    font-size: 24px;
+    margin-top: 50px;
+}
+
+#content {
+    width: 750px;
+    margin-top: 50px;
+    margin-left: 575px;
+    border: 3px solid yellow;
+    border-radius: 12px;
+}
+
+#character-info {
+    margin-top: 20px;
+}
+
+#error {
+    color: red;
+    margin-top: 50px;
+}
+
+button{
+    margin-top: 26px;
+}
