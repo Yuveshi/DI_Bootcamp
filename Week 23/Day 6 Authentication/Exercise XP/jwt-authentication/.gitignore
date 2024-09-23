@@ -1,0 +1,25 @@
+# Ignore node_modules folder (contains installed npm packages)
+node_modules/
+
+# Ignore environment variable files (contains sensitive information like secrets, database URLs, etc.)
+.env
+
+# Ignore log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Ignore operating system-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore editor/IDE-specific files (optional, for VS Code or other editors)
+.vscode/
+.idea/
+
+# Ignore build files (optional, for TypeScript or Babel projects)
+dist/
+build/
+
+# Ignore any other sensitive or temporary files
+*.log
