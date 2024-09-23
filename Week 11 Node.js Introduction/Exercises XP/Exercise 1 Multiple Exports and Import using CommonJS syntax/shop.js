@@ -1,15 +1,11 @@
-const products = require('./products.js');
+// shop.js
+const products = require('./products'); // Import products
 
-console.log(products);
-
-const shopFunc = (name) =>{
-    const product = products.find(product => product.name === name);
-    if (product) {
-        console.log(`Name: ${product.name}, Price: ${product.price}, Category: ${product.category}`);
-    }else {
-        console.log(`Product '${name}' not found`);
-    }
+// Function to find product by name
+function findProductByName(productName) {
+    return products.find(product => product.name === productName);
 }
 
-shopFunc('Laptop');
-shopFunc('T-shirt')
+// Test the function
+console.log(findProductByName('Laptop'));  // Should print Laptop details
+console.log(findProductByName('Shoes'));   // Should print Shoes details
