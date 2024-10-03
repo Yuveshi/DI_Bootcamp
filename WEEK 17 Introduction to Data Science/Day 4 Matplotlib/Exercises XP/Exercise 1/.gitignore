@@ -1,0 +1,36 @@
+# Python Bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+env/
+venv/
+ENV/
+.venv/
+.virtualenv/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Hidden system files
+.DS_Store
+Thumbs.db
+
+# Matplotlib cache
+.matplotlib/
+
+# Ignore Jupyter Notebook metadata (optional)
+*.ipynb-meta
+
+# Ignore saved plot images (if you don’t want to track them)
+*.png
+
+# Ignore Python log files
+*.log
+
+# Ignore CSV or other data files (if these are temporary and should not be tracked)
+*.csv
+*.tsv
+*.dat
+*.json
