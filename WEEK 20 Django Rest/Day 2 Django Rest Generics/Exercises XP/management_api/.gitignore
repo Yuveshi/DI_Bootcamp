@@ -1,0 +1,45 @@
+# Python
+*.pyc
+__pycache__/
+
+# Django
+db.sqlite3
+*.log
+
+# Virtual environment
+env/
+venv/
+*.env
+
+# Byte-compiled / optimized / DLL files
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+
+# Django migrations
+**/migrations/
+
+# MacOS specific files
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Coverage reports
+htmlcov/
+.coverage
+
+# Node modules
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Git itself
+.git/
+
+# Other project-specific files
+.idea/
