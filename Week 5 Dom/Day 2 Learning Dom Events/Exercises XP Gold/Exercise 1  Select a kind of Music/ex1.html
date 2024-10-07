@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <label for="genres">Select a kind of music:</label>
+<select id="genres">
+   <option value="rock">Rock</option>
+   <option value="blues" selected>Blues</option>
+</select>
+<p id="selectedValue"></p>
+
+<script>
+   let genres = document.getElementById('genres');
+   document.getElementById('selectedValue').textContent = genres.value;
+
+   // Adding a new option and setting it as default
+   let newOption = document.createElement('option');
+   newOption.value = 'classic';
+   newOption.textContent = 'Classic';
+   genres.appendChild(newOption);
+   newOption.selected = true;
+
+   // Display selected value on change
+   genres.addEventListener('change', function() {
+      document.getElementById('selectedValue').textContent = genres.value;
+   });
+   </script>
+</html>

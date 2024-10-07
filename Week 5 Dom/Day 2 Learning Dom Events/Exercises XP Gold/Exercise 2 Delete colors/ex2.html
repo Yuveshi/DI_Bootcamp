@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <form>
+      <label for="colorSelect">Select a color:</label>
+      <select id="colorSelect">
+          <option>Red</option>
+          <option>Green</option>
+          <option>White</option>
+          <option>Black</option>
+      </select>
+      <input id="button" type="button" value="Select and Remove">
+  </form>
+</body>
+<script>
+   var select = document.getElementById("colorSelect");
+   let btn = document.querySelector('#button');
+
+   btn.addEventListener('click', function() {
+      // Get the selected option
+      let option = select.options[select.selectedIndex];
+
+      // Remove the selected option
+      option.remove();
+   });
+</script>
+</html>

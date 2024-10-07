@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+</head>
+<body>
+   <h1>my shopping list</h1><br>
+   <div id="root"></div>
+   <form id="addItemForm">
+      <label for="name">Enter item to add:</label><br>
+      <input type="text" name="name" placeholder="Name" /><br><br>
+      <input type="submit" name="Submit">
+      <input type="reset" name="Clear All">
+   </form>
+</body>
+<script>
+   var shoppingList = []
+   let form = document.getElementById('addItemForm')
+   form.addEventListener('submit', (e) => {
+      e.preventDefault()
+      let fdata = new FormData(form)
+      let name = fdata.get('name')
+      shoppingList.push(name)
+      updateList()
+   })
+
+   form.addEventListener('reset', (e)=>{
+      shoppingList = []
+      let list = document.getElementById('root')
+      list.innerHTML = ''
+   })
+
+   function updateList(){
+      let list = document.getElementById('root')
+      list.innerHTML = ''
+      list.appendChild(document.createElement('ul'))
+      ul = document.querySelector('ul')
+      for (let item of shoppingList){
+         let li = document.createElement('li')
+         li.innerText = item
+         ul.appendChild(li)
+      }
+   }
+</script>
+</html>
