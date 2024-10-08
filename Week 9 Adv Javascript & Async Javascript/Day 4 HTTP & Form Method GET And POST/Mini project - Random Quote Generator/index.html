@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quote Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <section>
+        <div id="quote"></div>
+        <br>
+        <div id="author">
+        </div>
+        <button id="generator" onclick="generateQuote()">Generate Quote</button>
+        <table id="quoteInfo">
+            <tr>
+                <th><button class="info" onclick="countCharacters(true)">Characters (with space)</button></th>
+                <th><button class="info" onclick="countCharacters(false)">Characters (no space)</button></th>
+                <th><button class="info" onclick="wordCount()">Word Count</button></th>
+                <th><button class="info" onclick="getLikes()">Likes</button></th>
+            </tr>
+            <tr>
+                <td id="countSpace"></td>
+                <td id="countNoSpace"></td>
+                <td id="words"></td>
+                <td id="likes"></td>
+            </tr>
+        </table>
+    </section>
+
+    <!-- part 2 -->
+    <section>
+        <form id="quoteForm" method="post">
+            <input type="text" id="authorName" name="author" placeholder="Enter Author name" required><br>
+            <textarea name="quote" id="newQuote" cols="30" rows="10" placeholder="Write Quote" required></textarea>
+            <div>
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </section>
+    
+    <section>
+        <!-- part 3 -->
+        <form id="getQuote" method="post">
+            <input type="text" placeholder="Enter author" name="searchAuthor" id="searchAuthor" required> 
+            <button type="submit">Search</button>
+        </form>
+        <div id="container">
+            <div id="quotesFound"></div>
+            <button id="prevQuote" onclick="prevQuote()">Previous</button>
+            <button id="nextQuote" onclick="nextQuote()">Next</button>
+        </div>
+        
+    </section>
+</body>
+</html>
