@@ -1,0 +1,1 @@
+INSERT INTO students (first_name, last_name, birth_date) VALUES ('Ben', '', '1986-04-27')
