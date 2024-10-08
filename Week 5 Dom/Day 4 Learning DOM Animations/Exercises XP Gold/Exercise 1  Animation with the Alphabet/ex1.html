@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      body{
+         width: 100vw;;
+         height: 100vh;
+         font-family: Arial, Helvetica, sans-serif;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+
+      #container{
+         width: 50%;
+         height: 50%;
+         text-align: center;
+         display: flex;
+         flex-direction: row;
+         flex-wrap: wrap;
+         justify-content: center;
+         align-items: center;
+         gap: 20px;
+      }
+
+      .box{
+         width: 100px;
+         height: 100px;
+         background-color: hsl(217, 60%, 58%);
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         border-radius: 10px;
+         font-size: 20px;
+      }
+
+   </style>
+</head>
+<body>
+   <div id="container">
+      <div class="box" draggable="true" data-letter="a">a</div>
+      <div class="box" draggable="true" data-letter="b">b</div>
+      <div class="box" draggable="true" data-letter="c">c</div>
+      <div class="box" draggable="true" data-letter="d">d</div>
+      <div class="box" draggable="true" data-letter="e">e</div>
+      <div class="box" draggable="true" data-letter="f">f</div>
+      <div class="box" draggable="true" data-letter="g">g</div>
+      <div class="box" draggable="true" data-letter="h">h</div>
+      <div class="box" draggable="true" data-letter="i">i</div>
+      <div class="box" draggable="true" data-letter="j">j</div>
+      <div class="box" draggable="true" data-letter="k">k</div>
+      <div class="box" draggable="true" data-letter="l">l</div>
+      <div class="box" draggable="true" data-letter="m">m</div>
+      <div class="box" draggable="true" data-letter="n">n</div>
+      <div class="box" draggable="true" data-letter="o">o</div>
+      <div class="box" draggable="true" data-letter="p">p</div>
+      <div class="box" draggable="true" data-letter="q">q</div>
+      <div class="box" draggable="true" data-letter="r">r</div>
+      <div class="box" draggable="true" data-letter="s">s</div>
+      <div class="box" draggable="true" data-letter="t">t</div>
+      <div class="box" draggable="true" data-letter="u">u</div>
+      <div class="box" draggable="true" data-letter="v">v</div>
+      <div class="box" draggable="true" data-letter="w">w</div>
+      <div class="box" draggable="true" data-letter="x">x</div>
+      <div class="box" draggable="true" data-letter="y">y</div>
+      <div class="box" draggable="true" data-letter="z">z</div>
+   </div>
+</body>
+<script>
+   const boxes = document.querySelectorAll('.box')
+   boxes.forEach(box => {
+      box.addEventListener('dragstart', dragStart)
+      box.addEventListener('dragend', dragEnd)
+   })
+   function dragStart(event){
+      event.dataTransfer.setData('text/plain', event.target.dataset.letter)
+      setTimeout(()=>{
+         event.target.classList.add('hide')
+      }, 0)
+   }
+   function dragEnd(event){
+      event.target.classList.remove('hide')
+   }
+   document.addEventListener('dragover', function(event){
+      event.preventDefault()
+   })
+   document.addEventListener('drop', function(event){
+      event.preventDefault()
+      const data = event.dataTransfer.getData('text/plain')
+      const droppedElement = document.querySelector(`.box.[data-letter="${data}"]`)
+
+      if (event.target.classList.contains('box')){
+         const targetBox = event.target
+         const temp = {
+            top : targetBox.style.top,
+            left : targetBox.style.left
+         }
+         targetBox.style.top = droppedElement.style.top
+         targetBox.style.left = droppedElement.style.left
+         droppedElement.style.top = temp.top
+         droppedElement.style.left = temp.left
+      }
+   })
+</script>
+</html>

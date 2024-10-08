@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      body, html{
+         width: 100%;
+         height: 100%;
+         overflow: hidden;
+      }
+      body{
+         display: flex;
+         justify-content: center;
+         align-items: center;
+      }
+      #para{
+         font-size: 20px;
+         width: 200px;
+         height: 150px;
+         padding: 5px;
+         border-radius: 20px;
+         background-color: hsl(208, 46%, 48%);
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         cursor: move;
+         -webkit-user-select: none; /* Safari */
+         user-select: none;
+         position: absolute;
+      }
+   </style>
+</head>
+<body>
+   <p id="para" draggable="true">Drag me!</p>
+</body>
+<script>
+   const draggableParagraph = document.getElementById('para');
+    let fontSize = 20; // Initial font size
+
+    // Add drag event listeners
+    draggableParagraph.addEventListener('dragstart', dragStart);
+    draggableParagraph.addEventListener('dragend', dragEnd);
+    document.addEventListener('dragover', dragOver);
+    document.addEventListener('drop', dragDrop);
+
+    function dragStart(event) {
+        event.dataTransfer.setData('text/plain', ''); // Required for Firefox to initiate dragging
+    }
+
+    function dragEnd(event) {
+        // Reset position styles after drag ends
+        draggableParagraph.style.left = event.pageX - draggableParagraph.offsetWidth / 2 + 'px';
+        draggableParagraph.style.top = event.pageY - draggableParagraph.offsetHeight / 2 + 'px';
+    }
+
+    function dragOver(event) {
+        event.preventDefault(); 
+    }
+
+    function dragDrop(event) {
+        event.preventDefault();
+       
+        draggableParagraph.style.left = event.pageX - draggableParagraph.offsetWidth / 2 + 'px';
+        draggableParagraph.style.top = event.pageY - draggableParagraph.offsetHeight / 2 + 'px';
+
+        
+        fontSize = Math.max(8, Math.min(32, event.pageY / 5)); // Limit font size between 8px and 32px
+        draggableParagraph.style.fontSize = fontSize + 'px';
+    }
+</script>
+</html>

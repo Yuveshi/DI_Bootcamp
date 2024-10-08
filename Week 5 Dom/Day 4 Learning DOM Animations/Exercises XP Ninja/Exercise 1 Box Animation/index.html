@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            overflow: hidden;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+            position: relative;
+            animation: move 2s infinite alternate;
+        }
+        @keyframes move {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-30px); }
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        function createBox() {
+            const box = document.createElement('div');
+            box.className = 'box';
+            box.style.backgroundColor = getRandomColor();
+            document.body.appendChild(box);
+        }
+
+        // Create multiple boxes
+        for (let i = 0; i < 10; i++) {
+            createBox();
+        }
+    </script>
+</body>
+</html>
