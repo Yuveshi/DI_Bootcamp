@@ -1,0 +1,51 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #282c34;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.drumset {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    justify-content: center;
+    background-image: url('https://github.com/devtlv/drumset_setup/blob/master/screenshot.png?raw=true');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.cover-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.drum {
+    border: 2px solid #f39c12;
+    background-color: rgba(231, 126, 34, 0.8);
+    border-radius: 10px;
+    margin: 10px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.drum:hover {
+    background-color: rgba(211, 84, 0, 0.8);
+}
+
+.drum:active {
+    transform: scale(0.95);
+}
